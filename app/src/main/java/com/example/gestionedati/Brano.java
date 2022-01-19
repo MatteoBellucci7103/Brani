@@ -6,17 +6,16 @@ public class Brano
 {
     private String titolo;
     private String autore;
-    //private String genere;
     private Integer durata;
 
-
+            //Metodo costruttore che mi permette di creare nuove istanze
     public Brano(String titolo, String autore, Integer durata) {
+        // Inizializzazioni dello stato delle nuove istanze
         this.titolo = titolo;
         this.autore = autore;
-        //this.genere = genere;
         this.durata = durata;
     }
-
+            //Metodi setter e getter
     public String getTitolo() {
         return titolo;
     }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GestioneDati">
         <activity
+            android:name=".VisualizzaBrani"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
