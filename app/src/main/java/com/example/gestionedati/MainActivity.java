@@ -23,11 +23,12 @@ public class MainActivity extends AppCompatActivity {
     String[] elencoGenere = {"Rock", "Liscio", "Pop", "Dance"};
 
     @Override   //Quando ho una classe base e un metodo figlio che ne specifica il comportamento. Entrambi aventi lo stesso nome.
-    /*  Bundle: pacchetto che contiene dati che servono per poter gestire l'activity e che possono spostarsi da un activity all'altra
+    /*
+        Bundle: pacchetto che contiene dati che servono per poter gestire l'activity e che possono spostarsi da un activity all'altra
         onCreate() : Crea interfaccia grafica
     */
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); //Super: prende i metodi della calsse padre
+        super.onCreate(savedInstanceState); //Super: chiama il costruttore della classe genitore
         setContentView(R.layout.activity_main); //prende codice sorgente da appCompactAtctivity
 
 //Recuperiamo i riferimenti dei controlli EditText definiti sopra e che serviranno per salvare i dati inseriti dall’utente,
@@ -72,8 +73,9 @@ public class MainActivity extends AppCompatActivity {
         inserisci.setOnClickListener(new Button.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String testo = spnGenere.getSelectedItem().toString();
+                        String testo = spnGenere.getSelectedItem().toString();  //getSelectedItem() : restituisce l'elemento selezionato e lo attribuisce a testo
                         Toast.makeText((getApplicationContext()), testo, Toast.LENGTH_LONG).show();
+                        //Richiamoa la funzione addBrano sull'oggetto gb e gli passo il titolo, l'autore e la durata
                         gb.addBrano(txtTitolo.getText().toString(), txtAutore.getText().toString(), Integer.getInteger(txtDurata.toString()));
                     }
                 }
